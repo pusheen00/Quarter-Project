@@ -1,0 +1,12 @@
+
+.logo {
+  color: darkgray;
+  font-size: 400px;
+  display:inline-block;
+}
+.center-block {
+  display:inline-block;
+}
+#myPopup {
+    visibility: hidden;
+  }
