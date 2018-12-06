@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Name: Eva Liu Date: Nov 28 2018 Exercise: mySQL-PHP Exercise 1 -->
+<html>
+<body>
+<!-- This is the html form and the styling -->
+<style>
+body {background-color: aliceBlue; color: salmon; text-align: center;}
+table {float: auto; margin: auto; font-size: 125%; border: 10px; text-align: center;}
+th {padding: 20px;}
+input#question {width: 55px;}
+input#submit{width: 100px; height: 40px; background-color:salmon; color: aliceBlue; font-size: 125%;}
+input#retry {width: 150px; height: 40px; background-color:salmon; color: aliceBlue; font-size: 125%;}
+</style>
+<!-- This sends the information to my database php page using POST -->
+<form action = "EvaTestPage.php" method = "POST">
+
+<!-- This is the form -->
+<h1> Welcome to my website! </h1>
+<h2> Please enter in your information below:</h2>
+
+<table>
+	<colgroup>
+	<tr>
+	<th> First Name </th>
+	<th>  <input id = "question" type = "text" name = "firstName" required><br> </th>
+	</tr>
+	<tr> 
+	<th> Last Name </th>
+	<th> <input id= "question" type = "text" name = "lastName" required> <br> </th>
+	</tr> 
+	<tr> 
+	<th> Which Test do You Want to Take? </th>
+	<th> <select id="chooseTest" name="test">
+		<option name="math" value="math" required> math </option>
+		<option name="history" value="history" required> history </option>
+		<option name="chemistry" value="chemistry" required> chemistry </option>
+		</select>
+	</th>
+	</tr>
+	</table>
+<br>
+<input id = "submit" type = "submit" value = "Submit">
+<!-- This will refresh the page so the user can resubmit -->
+<input type="button" id="retry" name = "redo" onclick = "location.href='chooseTest.html'" value = "Clear Form"></button> 
+</form>
+</html>
